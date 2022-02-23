@@ -1,11 +1,13 @@
+import { SearchContainer, SearchInput } from "./styled";
+
 export const SearchBox = (props) => {
   return (
-    <div>
-      <input
+    <SearchContainer>
+      <SearchInput
         value={props.value}
         onChange={(event) => props.setSearchValue(event.target.value)}
         placeholder="Type to search..."
       />
-    </div>
+    </SearchContainer>
   );
 };

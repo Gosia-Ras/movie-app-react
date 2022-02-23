@@ -1,10 +1,10 @@
 import { VscHeart } from "react-icons/vsc";
 
-export const AddToFavourites = () => {
+export const AddFavourites = () => {
   return (
     <>
       <span>
-        Add to Favourites <VscHeart />{" "}
+        Add to Favourites <VscHeart />
       </span>
     </>
   );

@@ -1,15 +1,19 @@
-import { AddToFavourites } from "../AddToFavourites.js";
-import { MoviesContainer } from "./styled";
+import { MoviesContainer, ImageContainer } from "./styled";
 
-export const MovieList = ({ movies }) => {
-  const favourites = movies.addFavourites;
+export const MovieList = (props) => {
+  const FavouriteComponent = props.favouriteComponent;
   return (
     <MoviesContainer>
-      {movies.map((movie, index) => (
-        <div>
-          <img src={movie.Poster} alt="movie poster" />
-          <AddToFavourites />
-        </div>
+      {props.movies.map((movie, index) => (
+        <ImageContainer className="image-container">
+          <img src={movie.Poster} alt="movie"></img>
+          <div
+            className="overlay"
+            onClick={() => props.handleFavouritesClick(movie)}
+          >
+            <FavouriteComponent />
+          </div>
+        </ImageContainer>
       ))}
     </MoviesContainer>
   );
