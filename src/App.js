@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
-import {MovieList} from "./common/MovieList";
+import { AddToFavourites } from "./common/AddToFavourites.js";
+import { MovieList } from "./common/MovieList";
+import { MovieListHeading } from "./common/MovieListHeading";
+import { SearchBox } from "./common/SearchBox";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [favourites, setFavourites] = useState([])
 
-  const fetchMovies = async () => {
-    const url = "http://www.omdbapi.com/?s=star wars&apikey=263d22d8";
+  const fetchMovies = async (searchValue) => {
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=3e1c3e7a`;
     const response = await fetch(url);
     const responseJson = await response.json();
 
@@ -13,14 +18,21 @@ export const App = () => {
       setMovies(responseJson.Search);
     }
   };
+  
+  const addFavouriteMovie = (movie) => {
+    const newFavouriteList = [...favourites, movie];
+    setFavourites(newFavouriteList)
+  }
 
   useEffect(() => {
-    fetchMovies();
-  }, []);
+    fetchMovies(searchValue);
+  }, [searchValue]);
 
   return (
-    <div>
-      <MovieList movies={movies} />
-    </div>
+    <>
+      <MovieListHeading heading="Movies Browser" />
+      <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+      <MovieList movies={movies} addFavourites={AddToFavourites} handleFavouritesClick={addFavouriteMovie} />
+    </>
   );
 };
