@@ -3,7 +3,7 @@ import { MovieList } from "./common/MovieList";
 import { MovieListHeading } from "./common/MovieListHeading";
 import { SearchBox } from "./common/SearchBox";
 import { AddFavourites } from "./common/AddToFavourites";
-
+import { RemoveFavourites } from "./common/RemoveFromFavourites";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -22,6 +22,13 @@ export const App = () => {
   };
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie];
+    setFavourites(newFavouriteList);
+  };
+
+  const removeFavouriteMovie = (movie) => {
+    const newFavouriteList = favourites.filter(
+      (favourite) => favourite.imdbID !== movie.imdbID
+    );
     setFavourites(newFavouriteList);
   };
 
@@ -46,7 +53,11 @@ export const App = () => {
         <MovieListHeading heading="Favourites" />
       </div>
       <div>
-        <MovieList movies={favourites} favouriteComponent={AddFavourites} />
+        <MovieList
+          movies={favourites}
+          handleFavouritesClick={removeFavouriteMovie}
+          favouriteComponent={RemoveFavourites}
+        />
       </div>
     </div>
   );
