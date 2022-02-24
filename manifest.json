@@ -1,7 +1,6 @@
 {
-  "short_name": "React App",
+  "short_name": "Movies Browser",
   "name": "Create React App Movies Browser",
-  "icons": [],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
