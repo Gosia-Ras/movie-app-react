@@ -12,8 +12,8 @@ export const App = () => {
   const [favourites, setFavourites] = useState([]);
 
   const fetchMovies = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=3e1c3e7a`;
-
+    const key = "3e1c3e7a";
+    const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=${key}`;
     const response = await fetch(url);
     const responseJson = await response.json();
 
