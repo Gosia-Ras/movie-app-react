@@ -1,4 +1,10 @@
-import { MoviesContainer, ImageContainer, Overlay, FavIcon } from "./styled";
+import {
+  MoviesContainer,
+  ImageContainer,
+  Overlay,
+  FavIcon,
+  Poster,
+} from "./styled";
 
 export const MovieList = (props) => {
   const FavouriteComponent = props.favouriteComponent;
@@ -6,7 +12,7 @@ export const MovieList = (props) => {
     <MoviesContainer>
       {props.movies.map((movie, index) => (
         <ImageContainer>
-          <img src={movie.Poster} alt="movie"></img>
+          <Poster src={movie.Poster} alt="movie" />
           <p>{movie.Title}</p>
           <p>{movie.Year}</p>
           <FavIcon />

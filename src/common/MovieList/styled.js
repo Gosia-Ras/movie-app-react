@@ -15,13 +15,17 @@ export const ImageContainer = styled.div`
   transition: transform 0.2s;
   margin: 10px;
   padding: 10px;
-  width: 100%;
 
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
     opacity: 1;
   }
+`;
+
+export const Poster = styled.img`
+  max-height: 400px;
+  margin-top: 30px;
 `;
 
 export const Overlay = styled.div`
