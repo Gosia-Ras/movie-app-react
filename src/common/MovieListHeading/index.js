@@ -1,5 +1,4 @@
-import { ListHeader } from "./styled";
-import { VscStarFull, VscDeviceCameraVideo } from "react-icons/vsc";
+import { Camera, ListHeader, Star } from "./styled";
 
 export const MovieListHeading = ({ heading }) => {
   return (
@@ -7,13 +6,13 @@ export const MovieListHeading = ({ heading }) => {
       <ListHeader>
         {heading === "Movies Browser" ? (
           <>
-            <h2>Movies</h2>
-            <VscDeviceCameraVideo />
+            <p>Movies</p>
+            <Camera />
           </>
         ) : (
           <>
-            <h2>Favourites</h2>
-            <VscStarFull />
+            <p>Favourites</p>
+            <Star />
           </>
         )}
       </ListHeader>
