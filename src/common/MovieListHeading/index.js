@@ -1,20 +1,22 @@
 import { Camera, ListHeader, Star } from "./styled";
 
-export const MovieListHeading = ({ heading }) => {
+export const MovieListHeading = ({ id }) => {
   return (
     <div>
       <ListHeader>
-        {heading === "Movies Browser" ? (
-          <>
-            <p>Movies</p>
-            <Camera />
-          </>
-        ) : (
-          <>
-            <p>Favourites</p>
-            <Star />
-          </>
-        )}
+        {
+          (id === "browser" ? (
+            <>
+              <p>Movies</p>
+              <Camera />
+            </>
+          ) : (
+            <>
+              <p>Watch later</p>
+              <Star />
+            </>
+          ))
+        }
       </ListHeader>
     </div>
   );

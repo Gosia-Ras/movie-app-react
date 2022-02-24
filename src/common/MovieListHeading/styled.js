@@ -1,19 +1,24 @@
 import styled from "styled-components";
-import { StarFill } from "@styled-icons/bootstrap/StarFill";
+import { HeartFill } from "@styled-icons/bootstrap/HeartFill";
 import { CameraReels } from "@styled-icons/bootstrap/CameraReels";
 
 export const ListHeader = styled.h1`
-  margin-left: 50px;
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 26px;
+  background-color: #273c75;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 35px;
 `;
 
-export const Star = styled(StarFill)`
+export const Star = styled(HeartFill)`
   width: 30px;
+  color: #fbc531;
 `;
 
 export const Camera = styled(CameraReels)`
   width: 30px;
+  color: #7f8fa6;
 `;

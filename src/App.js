@@ -42,18 +42,17 @@ export const App = () => {
       <PageHeader />
       <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       <div>
-        <MovieListHeading heading="Movies Browser" id="#browser" />
+        <MovieListHeading heading="Movies Browser" id="browser" />
       </div>
       <div>
         <MovieList
-          id="#favourites"
           movies={movies}
           favouriteComponent={AddFavourites}
           handleFavouritesClick={addFavouriteMovie}
         />
       </div>
       <div>
-        <MovieListHeading heading="Favourites" />
+        <MovieListHeading id="watch" />
       </div>
       <div>
         <MovieList

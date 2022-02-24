@@ -6,6 +6,8 @@ export const Header = styled.header`
   padding: 15px;
   justify-content: space-between;
   margin: 5px 35px;
+  background-color: #273c75;
+  border-radius: 5px;
 `;
 
 

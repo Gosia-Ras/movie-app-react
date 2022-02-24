@@ -1,13 +1,11 @@
 import styled from "styled-components";
-import { StarFill } from "@styled-icons/bootstrap/StarFill";
-
+import { HeartFill } from "@styled-icons/bootstrap/HeartFill";
 export const MoviesContainer = styled.div`
   display: flex;
   overflow-y: hidden;
   flex-wrap: nowrap;
   margin: 0 50px;
   height: 750px;
-  border: 1px solid white;
 `;
 
 export const ImageContainer = styled.div`
@@ -44,7 +42,7 @@ export const Overlay = styled.div`
   }
 `;
 
-export const FavIcon = styled(StarFill)`
+export const FavIcon = styled(HeartFill)`
   color: #fbc531;
   width: 20px;
 `;

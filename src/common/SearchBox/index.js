@@ -7,7 +7,7 @@ export const SearchBox = (props) => {
         autoFocus
         value={props.value}
         onChange={(event) => props.setSearchValue(event.target.value)}
-        placeholder="Type to search..."
+        placeholder="Type to search through titles..."
       />
     </SearchContainer>
   );
