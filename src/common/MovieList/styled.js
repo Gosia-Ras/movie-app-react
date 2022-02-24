@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { HeartFill } from "@styled-icons/bootstrap/HeartFill";
 export const MoviesContainer = styled.div`
   display: flex;
   overflow-y: hidden;
   flex-wrap: nowrap;
   margin: 0 50px;
-  height: 750px;
+  height: 660px;
 `;
 
 export const ImageContainer = styled.div`
@@ -17,7 +16,6 @@ export const ImageContainer = styled.div`
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
-    opacity: 1;
   }
 `;
 
@@ -28,21 +26,16 @@ export const Poster = styled.img`
 
 export const Overlay = styled.div`
   position: absolute;
-  width: 80%;
-  transition: 0.5s ease;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  opacity: 0;
   background: rgba(0, 0, 0, 0.8);
-  border-radius: 20px;
+  width: 78%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 183px;
+  font-size: 20px;
+  padding: 188px 21px;
+  text-align: center;
 
   &:hover {
     opacity: 1;
   }
-`;
-
-export const FavIcon = styled(HeartFill)`
-  color: #fbc531;
-  width: 20px;
 `;
