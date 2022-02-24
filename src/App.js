@@ -4,6 +4,7 @@ import { MovieListHeading } from "./common/MovieListHeading";
 import { SearchBox } from "./common/SearchBox";
 import { AddFavourites } from "./common/AddToFavourites";
 import { RemoveFavourites } from "./common/RemoveFromFavourites";
+import { PageHeader } from "./common/PageHeader";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -38,12 +39,14 @@ export const App = () => {
 
   return (
     <div>
+      <PageHeader />
+      <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       <div>
-        <MovieListHeading heading="Movies Browser" />
-        <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+        <MovieListHeading heading="Movies Browser" id="#browser" />
       </div>
       <div>
         <MovieList
+          id="#favourites"
           movies={movies}
           favouriteComponent={AddFavourites}
           handleFavouritesClick={addFavouriteMovie}
