@@ -11,7 +11,14 @@ export const ListHeader = styled.h1`
   border-radius: 5px;
   padding: 15px;
   margin: 10px 35px;
+
+  @media (max-width: 768px) {
+    margin: 0;
+    justify-content: center;
+    padding: 5px;
+  }
 `;
+
 
 export const Star = styled(HeartFill)`
   width: 30px;

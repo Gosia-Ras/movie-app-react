@@ -12,6 +12,7 @@ export const ImageContainer = styled.div`
   transition: transform 0.2s;
   margin: 10px;
   padding: 10px;
+  width: 300px;
 
   &:hover {
     cursor: pointer;
@@ -20,21 +21,21 @@ export const ImageContainer = styled.div`
 `;
 
 export const Poster = styled.img`
-  max-height: 400px;
+  max-width: 300px;
   margin-top: 30px;
 `;
 
 export const Overlay = styled.div`
-  position: absolute;
   background: rgba(0, 0, 0, 0.8);
-  width: 78%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
   transition: 0.5s ease;
   opacity: 0;
-  bottom: 183px;
-  font-size: 20px;
-  padding: 188px 21px;
-  text-align: center;
-
+  padding-top: 200px;
   &:hover {
     opacity: 1;
   }

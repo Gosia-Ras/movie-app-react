@@ -5,12 +5,8 @@ export const MovieList = (props) => {
   return (
     <MoviesContainer>
       {props.movies.map((movie, index) => (
-        <ImageContainer>
-          <Poster
-            src={movie.Poster}
-            alt="movie"
-            onClick={() => props.handleFavouritesClick(movie)}
-          />
+        <ImageContainer onClick={() => props.handleFavouritesClick(movie)}>
+          <Poster src={movie.Poster} alt="movie" />
           <p>{movie.Title}</p>
           <p>{movie.Year}</p>
           <Overlay>

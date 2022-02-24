@@ -8,6 +8,10 @@ export const Header = styled.header`
   margin: 5px 35px;
   background-color: #273c75;
   border-radius: 5px;
+
+  @media (max-width: 768px) {
+   margin: 0;
+  }
 `;
 
 
@@ -16,6 +20,12 @@ export const NavList = styled.ul`
   list-style: none;
   display: flex;
   gap: 15px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-right: 15px;
+
+  }
 `;
 
 export const NavItem = styled.li`
