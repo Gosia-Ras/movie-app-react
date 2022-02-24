@@ -6,11 +6,15 @@ export const MoviesContainer = styled.div`
   flex-wrap: nowrap;
   height: 600px;
   margin: 50px;
+  border: 1px solid white;
 `;
 
 export const ImageContainer = styled.div`
   position: relative;
   transition: transform 0.2s;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
 
   &:hover {
     cursor: pointer;
@@ -20,12 +24,9 @@ export const ImageContainer = styled.div`
 
 export const Overlay = styled.div`
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   transition: 0.5s ease;
-  opacity: 0;
   bottom: 0;
   font-size: 20px;
   padding: 20px;
-  text-align: center;
 `;
