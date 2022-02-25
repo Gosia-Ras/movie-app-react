@@ -1,4 +1,4 @@
-import { Header, NavItem, NavList } from "./styled";
+import { Header, NavItem, NavLink, NavList } from "./styled";
 
 export const PageHeader = () => {
   return (
@@ -6,8 +6,12 @@ export const PageHeader = () => {
       <h1>Movies Browser</h1>
       <nav>
         <NavList>
-          <NavItem>Browser</NavItem>
-          <NavItem>Favourites</NavItem>
+          <NavItem>
+            <NavLink href="#browser">Browser</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#watch">Favourites</NavLink>
+          </NavItem>
         </NavList>
       </nav>
     </Header>

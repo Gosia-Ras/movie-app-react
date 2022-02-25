@@ -5,6 +5,7 @@ import { SearchBox } from "./common/SearchBox";
 import { AddFavourites } from "./common/AddToFavourites";
 import { RemoveFavourites } from "./common/RemoveFromFavourites";
 import { PageHeader } from "./common/PageHeader";
+import { Footer } from "./common/Footer";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -58,7 +59,7 @@ export const App = () => {
 
   return (
     <div>
-      <PageHeader />
+      <PageHeader id="top" />
       <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       <div>
         <MovieListHeading heading="Movies Browser" id="browser" />
@@ -71,15 +72,16 @@ export const App = () => {
         />
       </div>
       <div>
-        <MovieListHeading id="watch" />
+        <MovieListHeading />
       </div>
-      <div>
+      <div id="watch">
         <MovieList
           movies={favourites}
           handleFavouritesClick={removeFavouriteMovie}
           favouriteComponent={RemoveFavourites}
         />
       </div>
+      <Footer />
     </div>
   );
 };
