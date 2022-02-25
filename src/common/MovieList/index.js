@@ -1,7 +1,7 @@
 import { ImageContainer, Poster, Overlay, MoviesContainer } from "./styled";
 import { nanoid } from "nanoid";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,11 +12,12 @@ export const MovieList = (props) => {
     <MoviesContainer>
       {props.movies.length > 0 ? (
         <Swiper
-          spaceBetween={50}
-          slidesPerView="auto"
-          modules={[Navigation, Pagination]}
+          slidesPerView={4}
+          spaceBetween={60}
+          modules={[Pagination]}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          updateOnWindowResize={true}
         >
           {props.movies.map((movie) => {
             return (
