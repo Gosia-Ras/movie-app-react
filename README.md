@@ -4,7 +4,7 @@
   - [Demo](#demo)
   - [Description](#description)
   - [Tools](#tools)
-    - [Known issues](#known-issues)
+    - [To-Do](#to-do)
 
 ## Demo
 
@@ -24,7 +24,8 @@ Movie app using [OMDb API](http://www.omdbapi.com/) that let's you search for mo
 - Swiper and Swiper-React
 - localStorage
 
-### Known issues
+### To-Do
 
-- possible to add one movie multiple times to "watch list"
-- need to adapt swiper for smaller screens
+- [ ] movie can be added only once to "Watch later" list
+- [ ] adapt swiper for smaller screens
+- [ ] remove list when search input is deleted
