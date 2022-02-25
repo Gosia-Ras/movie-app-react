@@ -27,3 +27,4 @@ Movie app using [OMDb API](http://www.omdbapi.com/) that let's you search for mo
 ### Known issues
 
 - possible to add one movie multiple times to "watch list"
+- need to adapt swiper for smaller screens
