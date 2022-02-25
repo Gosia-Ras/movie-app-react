@@ -21,6 +21,27 @@ export const App = () => {
       setMovies(responseJson.Search);
     }
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      fetchMovies(searchValue);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [searchValue]);
+
+  useEffect(() => {
+    const movieFavourites = JSON.parse(
+      localStorage.getItem("react-movie-app-favourites")
+    );
+
+    if (movieFavourites) {
+      setFavourites(movieFavourites);
+    }
+  }, []);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem("react-movie-app-favourites", JSON.stringify(items));
+  };
+
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie];
     setFavourites(newFavouriteList);
@@ -32,23 +53,8 @@ export const App = () => {
       (favourite) => favourite.imdbID !== movie.imdbID
     );
     setFavourites(newFavouriteList);
-    saveToLocalStorage(newFavouriteList)
+    saveToLocalStorage(newFavouriteList);
   };
-
-  const saveToLocalStorage = (items) => {
-    localStorage.setItem("react-movie-app-favourites", JSON.stringify(items));
-  };
-
-  useEffect(() => {
-    const movieFavourites = JSON.parse(
-      localStorage.getItem("react-movie-app-favourites")
-    );
-    setFavourites(movieFavourites);
-  }, []);
-
-  useEffect(() => {
-    fetchMovies(searchValue);
-  }, [searchValue]);
 
   return (
     <div>
