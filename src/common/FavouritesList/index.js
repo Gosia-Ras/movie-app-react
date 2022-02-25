@@ -1,4 +1,9 @@
-import { ImageContainer, Poster, Overlay, MoviesContainer } from "./styled";
+import {
+  ImageContainer,
+  Poster,
+  Overlay,
+  MoviesContainer,
+} from "../MovieList/styled";
 import { nanoid } from "nanoid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
@@ -6,11 +11,27 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export const MovieList = (props) => {
+export const FavouritesList = (props) => {
   const FavouriteComponent = props.favouriteComponent;
   return (
     <MoviesContainer>
-      {props.movies.length > 0 ? (
+      {props.movies.length < 4 ? (
+        props.movies.map((movie) => {
+          return (
+            <ImageContainer
+              key={nanoid()}
+              onClick={() => props.handleFavouritesClick(movie)}
+            >
+              <Poster src={movie.Poster} alt="movie" />
+              <p>{movie.Title}</p>
+              <p>{movie.Year}</p>
+              <Overlay>
+                <FavouriteComponent />
+              </Overlay>
+            </ImageContainer>
+          );
+        })
+      ) : (
         <Swiper
           spaceBetween={50}
           slidesPerView={4}
@@ -36,8 +57,6 @@ export const MovieList = (props) => {
             );
           })}
         </Swiper>
-      ) : (
-        <p>The list is empty</p>
       )}
     </MoviesContainer>
   );

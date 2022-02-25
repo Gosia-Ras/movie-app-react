@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 export const MoviesContainer = styled.div`
   display: flex;
   overflow-y: hidden;

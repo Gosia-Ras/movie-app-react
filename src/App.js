@@ -6,6 +6,7 @@ import { AddFavourites } from "./common/AddToFavourites";
 import { RemoveFavourites } from "./common/RemoveFromFavourites";
 import { PageHeader } from "./common/PageHeader";
 import { Footer } from "./common/Footer";
+import { FavouritesList } from "./common/FavouritesList";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -74,13 +75,11 @@ export const App = () => {
       <div>
         <MovieListHeading />
       </div>
-      <div id="watch">
-        <MovieList
-          movies={favourites}
-          handleFavouritesClick={removeFavouriteMovie}
-          favouriteComponent={RemoveFavourites}
-        />
-      </div>
+      <FavouritesList
+        movies={favourites}
+        handleFavouritesClick={removeFavouriteMovie}
+        favouriteComponent={RemoveFavourites}
+      />
       <Footer />
     </div>
   );
