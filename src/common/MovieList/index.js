@@ -13,7 +13,7 @@ export const MovieList = (props) => {
       {props.movies.length > 0 ? (
         <Swiper
           spaceBetween={50}
-          slidesPerView={4}
+          slidesPerView="auto"
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
