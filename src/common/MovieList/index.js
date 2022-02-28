@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 export const MovieList = (props) => {
   const FavouriteComponent = props.favouriteComponent;
   return (
-    <MoviesContainer>
+    <MoviesContainer id="browser">
       {props.movies.length > 0 ? (
         <Swiper
           slidesPerView={4}

@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 export const FavouritesList = (props) => {
   const FavouriteComponent = props.favouriteComponent;
   return (
-    <MoviesContainer>
+    <MoviesContainer id="watch">
       {props.movies.length < 4 ? (
         props.movies.map((movie) => {
           return (
