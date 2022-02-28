@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Search } from "@styled-icons/bootstrap/Search";
 
 export const MoviesContainer = styled.div`
   display: flex;
@@ -6,6 +7,12 @@ export const MoviesContainer = styled.div`
   flex-wrap: nowrap;
   margin: 0 50px;
   height: 660px;
+`;
+
+export const SearchIcon = styled(Search)`
+  width: 50px;
+  color: #fbc531;
+  margin: 0 auto;
 `;
 
 export const ImageContainer = styled.div`

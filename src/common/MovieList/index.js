@@ -1,4 +1,10 @@
-import { ImageContainer, Poster, Overlay, MoviesContainer } from "./styled";
+import {
+  ImageContainer,
+  Poster,
+  Overlay,
+  MoviesContainer,
+  SearchIcon,
+} from "./styled";
 import { nanoid } from "nanoid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
@@ -38,7 +44,7 @@ export const MovieList = (props) => {
           })}
         </Swiper>
       ) : (
-        <p>The list is empty</p>
+        <SearchIcon />
       )}
     </MoviesContainer>
   );
