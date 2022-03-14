@@ -5,6 +5,11 @@ export const FooterBox = styled.footer`
   background-color: #2f3640;
   padding: 10px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    margin-top: 25px;
+    font-size: 14px;
+  }
 `;
 
 export const FooterLink = styled.a`

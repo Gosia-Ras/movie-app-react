@@ -1,12 +1,13 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 100vw;
   background-color: #192a56;
   color: #f5f6fa;
   overflow-x: hidden;
+  position: absolute;
+  width: 100vw;
 }
 
 code {

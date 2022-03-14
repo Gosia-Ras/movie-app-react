@@ -9,9 +9,19 @@ export const Header = styled.header`
   background-color: #273c75;
   border-radius: 5px;
   box-shadow: 0px 0px 6px 0px #273c75;
-
   @media (max-width: 768px) {
     margin: 0;
+    width: 100%;
+    border-radius: 0;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+`;
+
+export const AppTitle = styled.h1`
+  @media (max-width: 768px) {
+    font-size: 24px;
+    padding: 10px;
   }
 `;
 
@@ -23,7 +33,7 @@ export const NavList = styled.ul`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    margin-right: 15px;
+    gap: 10px;
   }
 `;
 
@@ -40,7 +50,7 @@ export const NavLink = styled.a`
   text-decoration: none;
   color: #f5f6fa;
 
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
 

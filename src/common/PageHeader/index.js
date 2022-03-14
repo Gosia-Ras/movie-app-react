@@ -1,9 +1,9 @@
-import { Header, NavItem, NavLink, NavList } from "./styled";
+import { AppTitle, Header, NavItem, NavLink, NavList } from "./styled";
 
 export const PageHeader = () => {
   return (
     <Header>
-      <h1>Movies Browser</h1>
+      <AppTitle>Movies Browser</AppTitle>
       <nav>
         <NavList>
           <NavItem>

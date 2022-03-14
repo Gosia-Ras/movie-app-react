@@ -14,9 +14,10 @@ export const ListHeader = styled.h2`
   box-shadow: 0px 0px 6px 0px #273c75;
 
   @media (max-width: 768px) {
-    margin: 0;
+    margin: 0px;
     justify-content: center;
-    padding: 5px;
+    border-radius: 0;
+    gap: 25px;
   }
 `;
 

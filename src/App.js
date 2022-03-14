@@ -7,6 +7,7 @@ import { RemoveFavourites } from "./common/RemoveFromFavourites";
 import { PageHeader } from "./common/PageHeader";
 import { Footer } from "./common/Footer";
 import { FavouritesList } from "./common/FavouritesList";
+import { Wrapper } from "./common/Wrapper";
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -59,7 +60,7 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <Wrapper>
       <PageHeader id="top" />
       <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       <div>
@@ -81,6 +82,6 @@ export const App = () => {
         favouriteComponent={RemoveFavourites}
       />
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
