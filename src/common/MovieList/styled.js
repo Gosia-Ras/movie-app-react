@@ -7,6 +7,22 @@ export const MoviesContainer = styled.div`
   flex-wrap: nowrap;
   margin: 0 50px;
   height: 660px;
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #40739e;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #487eb0;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px inset 0px 0px 6px 0px #487eb0;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
 `;
 
 export const SearchIcon = styled(Search)`
